@@ -3,3 +3,6 @@
 ## Python
 
 ## R
+
+## Ignore
+/scripts
