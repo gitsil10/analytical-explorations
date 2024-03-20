@@ -12,7 +12,7 @@ pandas
 import pandas as pd
 
 #class
-class Date:
+class DateMgmt:
     """
     @brief A class to manage dates
     @param current_month (int): The current month

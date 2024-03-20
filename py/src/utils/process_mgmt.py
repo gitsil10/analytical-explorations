@@ -1,6 +1,6 @@
 """
 @gitsil10
-@file process_data.py
+@file process_mgmt.py
 @brief A class to process data
 @details A class to process data
 @version 0.1
@@ -12,12 +12,12 @@ os
 from os import path
 
 #class
-class ProcessData:
+class ProcessMgmt:
     """
     @brief A class to process data
     @param data (str): The data to process
     @param paths (dict): The paths to the raw, processed, and output data
-    @return (ProcessData): The ProcessData object
+    @return (ProcessMgmt): The ProcessData object
     """
     def __init__(self):
         self.paths:dict = {

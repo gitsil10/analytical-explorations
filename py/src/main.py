@@ -7,7 +7,7 @@
 @date 2024-03-20
 """
 #imports
-from utils.process_data import ProcessData
+from py.src.utils.process_mgmt import ProcessMgmt
 
 #main
 def main():
