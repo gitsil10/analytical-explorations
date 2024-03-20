@@ -5,9 +5,13 @@
 @details A class to process data
 @version 0.1
 @date 2024-03-20
+@dependencies
+os
 """
+#imports
 from os import path
 
+#class
 class ProcessData:
     """
     @brief A class to process data
