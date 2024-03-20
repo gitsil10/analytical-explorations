@@ -20,7 +20,7 @@ class ProcessData:
             "output": "data/output",
             "processed": "data/processed",
             "raw": "data/raw"
-        }
+            }
 
     def get_path(self) -> dict:
         """
