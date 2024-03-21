@@ -15,15 +15,24 @@ pandas -> pd
 
 @todo
 1. input data as a dataframe
-2. clean data
+2. describe data
+    1. summary statistics
+    2. column information
+3. clean data
     1. drop na
     2. fill na
-3. return group data by dates
+4. return group data by dates
     1. group by year as mean, std, count
     2. group by month as mean, std, count
     3. group by quarter as mean, std, count
     4. group by year, month as sum, mean, std, count
     5. group by year, quarter as sum, mean, std, count
+5. return grow rate by dates
+    1. grow rate by dates
+    2. grow rate by year
+    3. grow rate by month
+    4. grow rate by quarter
+    5. grow rate by year, month
 """
 #imports
 import pandas as pd
@@ -57,6 +66,20 @@ class DataframeMgmt:
             raise ValueError("The data must be a pandas dataframe")
         
         self._data = data
+
+    def describe_data(self) -> pd.DataFrame:
+        """
+        @brief Describe the data
+        @return (pd.DataFrame): The data described
+        """
+        return self._data.describe()
+    
+    def info_data(self) -> pd.DataFrame:
+        """
+        @brief Get the information of the data
+        @return (pd.DataFrame): The information of the data
+        """
+        return self._data.info()
 
     def clean_drop_na(self) -> pd.DataFrame:
         """
