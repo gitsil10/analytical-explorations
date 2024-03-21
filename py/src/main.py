@@ -12,9 +12,7 @@ from utils.process_mgmt import ProcessMgmt
 
 #main
 def main():
-    pass
-    
-    
+    pass    
 
 #driver
 if __name__ == "__main__":
