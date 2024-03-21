@@ -14,7 +14,7 @@
 class Finance:
     """
     @brief A class to manage financial security
-    @param revenue (float): The income from an entity
+    @param revenue (float): The incomes from an entity
     @param expense (float): The costs from an entity
     @param asset (float): The financial resources of an entity
     @param liability (float): The financial obligations of an entity
