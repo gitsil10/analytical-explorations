@@ -5,8 +5,9 @@
 @details A class to process data
 @version 0.1
 @date 2024-03-20
+
 @dependencies
-os
+os -> path
 """
 #imports
 from os import path

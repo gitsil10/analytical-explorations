@@ -5,8 +5,9 @@
 @details A class to manage dates
 @version 0.1
 @date 2024-03-20
+
 @dependencies
-pandas
+pandas -> pd
 """
 #imports
 import pandas as pd
