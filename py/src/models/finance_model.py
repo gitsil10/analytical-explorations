@@ -20,13 +20,13 @@ class Finance:
     @param liability (float): The financial obligations of an entity
     """
     def __init__(self):
-        self._revenue:float = None
-        self._expense:float = None
-        self._asset:float = None
-        self._liability:float = None
+        self._revenue:list[float] = None
+        self._expense:list[float] = None
+        self._asset:list[float] = None
+        self._liability:list[float] = None
     
     @property
-    def revenue(self) -> float:
+    def revenue(self) -> list[float]:
         """
         @brief Get the revenue of an entity
         @return (float): The revenue of an entity
@@ -34,7 +34,7 @@ class Finance:
         return self._revenue
     
     @property
-    def expense(self) -> float:
+    def expense(self) -> list[float]:
         """
         @brief Get the expense of an entity
         @return (float): The expense of an entity
@@ -42,7 +42,7 @@ class Finance:
         return self._expense
     
     @property
-    def asset(self) -> float:
+    def asset(self) -> list[float]:
         """
         @brief Get the asset of an entity
         @return (float): The asset of an entity
@@ -50,7 +50,7 @@ class Finance:
         return self._asset
     
     @property
-    def liability(self) -> float:
+    def liability(self) -> list[float]:
         """
         @brief Get the liability of an entity
         @return (float): The liability of an entity
@@ -58,7 +58,7 @@ class Finance:
         return self._liability
     
     @property
-    def net_income(self) -> float:
+    def net_income(self) -> list[float]:
         """
         @brief Get the net income of an entity
         @return (float): The net income of an entity
@@ -66,7 +66,7 @@ class Finance:
         return self._revenue - self._expense
     
     @property
-    def equity(self) -> float:
+    def equity(self) -> list[float]:
         """
         @brief Get the equity of an entity
         @return (float): The equity of an entity
@@ -74,7 +74,7 @@ class Finance:
         return self._asset - self._liability
     
     @revenue.setter
-    def revenue(self, revenue) -> None:
+    def revenue(self, revenue:list[float]) -> None:
         """
         @brief Set the revenue of an entity
         @param revenue (float): The revenue of an entity
@@ -82,7 +82,7 @@ class Finance:
         self._revenue = revenue
 
     @expense.setter
-    def expense(self, expense) -> None:
+    def expense(self, expense:list[float]) -> None:
         """
         @brief Set the expense of an entity
         @param expense (float): The expense of an entity
@@ -90,7 +90,7 @@ class Finance:
         self._expense = expense
 
     @asset.setter
-    def asset(self, asset) -> None:
+    def asset(self, asset:list[float]) -> None:
         """
         @brief Set the asset of an entity
         @param asset (float): The asset of an entity
@@ -98,7 +98,7 @@ class Finance:
         self._asset = asset
 
     @liability.setter
-    def liability(self, liability) -> None:
+    def liability(self, liability:list[float]) -> None:
         """
         @brief Set the liability of an entity
         @param liability (float): The liability of an entity
