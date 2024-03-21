@@ -36,7 +36,7 @@ class FinancialSecurityMgmt:
             "options": None
         }
         if symbol:
-            self.set_ticker(symbol)
+            self.ticker = symbol
 
     @property
     def ticker(self) -> yf.Ticker:
