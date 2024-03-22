@@ -192,34 +192,34 @@ class Regression:
             self.regression["response"] = response
 
         #ignore if feature is not set
-        if not self.regression["feature"] is None and not self.regression["response"] is None:
-            #simple random sampling
-            X_train, X_test, y_train, y_test = train_test_split(
-                np.array(self.feature).reshape(-1, 1), 
-                np.array(self.response).reshape(-1, 1), 
-                test_size=0.2, 
-                random_state=0
-            )
+        if self.regression["feature"] is None or self.regression["response"] is None:
+            return False
+        
+        #simple random sampling
+        X_train, X_test, y_train, y_test = train_test_split(
+            np.array(self.feature).reshape(-1, 1), 
+            np.array(self.response).reshape(-1, 1), 
+            test_size=0.2, 
+            random_state=0
+        )
 
-            #normalize
-            scaler = StandardScaler()
-            X_train, X_test = scaler.fit_transform(X_train), scaler.transform(X_test)
+        #normalize
+        scaler = StandardScaler()
+        X_train, X_test = scaler.fit_transform(X_train), scaler.transform(X_test)
             
-            #model fitting
-            self.model.fit(X_train, y_train)
+        #model fitting
+        self.model.fit(X_train, y_train)
 
-            #model evaluation
-            self.regression["slope"] = self.model.coef_[0][0]
-            self.regression["intercept"] = self.model.intercept_[0]
-            self.regression["predictions"] = self.model.predict(X_test)
-            self.regression["mean_squared_error"] = mean_squared_error(y_test, self.predictions)
-            self.regression["r_squared"] = r2_score(y_test, self.predictions)
-            self.regression["p_value"] = st.linregress(self.feature, self.response).pvalue
-            self.regression["std_err"] = st.linregress(self.feature, self.response).stderr
-            self.regression["residuals"] = y_test - self.predictions
-            return True
-    
-        return False
+        #model evaluation
+        self.regression["slope"] = self.model.coef_[0][0]
+        self.regression["intercept"] = self.model.intercept_[0]
+        self.regression["predictions"] = self.model.predict(X_test)
+        self.regression["mean_squared_error"] = mean_squared_error(y_test, self.predictions)
+        self.regression["r_squared"] = r2_score(y_test, self.predictions)
+        self.regression["p_value"] = st.linregress(self.feature, self.response).pvalue
+        self.regression["std_err"] = st.linregress(self.feature, self.response).stderr
+        self.regression["residuals"] = y_test - self.predictions
+        return True
         
     def prediction(self, feature:tuple[float]) -> float:
         """

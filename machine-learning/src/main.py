@@ -7,12 +7,10 @@
 @details A file to run the application
 """
 #imports
-
+import include.support_vector_machine as svm
 #main
 def main():
     pass
-
-
 
 #driver
 if __name__ == "__main__":
