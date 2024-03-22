@@ -1,17 +1,14 @@
 """
 @gitsil10
 @version 0.1
-@date 2024-03-21
+@date 2024-03-20
 @file main.py
 @brief application driver
 @details A file to run the application
+
 """
 #imports
-<<<<<<< HEAD
 
-=======
-import include.support_vector_machine as svm
->>>>>>> feat/python/analytics
 #main
 def main():
     pass
