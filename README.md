@@ -1,5 +1,5 @@
 # Analytical Exploration
-[Repo]("https://github.com/gitsil10/analytical-explorations.git")
+[Repo](https://github.com/gitsil10/analytical-explorations.git)
 
 
 ## Analytics
