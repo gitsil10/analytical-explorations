@@ -1,8 +1,8 @@
 #ignore scripts
-/scripts
+scripts
 
 #virtual environment
 .venv
 
 #chache
-/__pycache__
+__pycache__
