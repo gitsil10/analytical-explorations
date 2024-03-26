@@ -1,6 +1,15 @@
 #ignore scripts
 /scripts
+<<<<<<< HEAD
 #virtual environment
 .venv
 #cache
 __pycache__
+=======
+
+#virtual environment
+.venv
+
+#chache
+/__pycache__
+>>>>>>> master
