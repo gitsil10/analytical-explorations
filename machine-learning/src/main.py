@@ -7,7 +7,7 @@
 @details A file to run the application
 """
 #imports
-import include.support_vector_machine as svm
+
 #main
 def main():
     pass
